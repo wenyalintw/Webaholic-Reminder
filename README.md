@@ -21,6 +21,11 @@
 
 ## Application Demo
 ### [Webaholic Reminder – Demo (YouTube)](https://youtu.be/vVIrdPcOeY0)
+<p align="center">
+<a href=https://www.youtube.com/watch?v= vVIrdPcOeY0>
+    <img src="resources/execute.gif" alt="demo" width="720" height="450">
+</a>
+</p>
 
 ## Introduction
 Are you a [Webaholic](https://www.urbandictionary.com/define.php?term=webaholic)?  
