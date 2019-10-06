@@ -1,0 +1,125 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+  <head>
+    <title>Go To Work</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css_file.css">
+    <link rel="stylesheet" href="tooltip.css">
+    <link href='http://fonts.googleapis.com/css?family=Oleo+Script' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Merienda+One' rel='stylesheet' type='text/css'>
+  </head>
+
+  <body id="body">
+
+    <header>
+      <div  class="top" style="align-items: center;">
+        <h1 style="display: inline; font-family: 'Merienda One', 'Oleo Script', Times, serif">Webaholic Reminder</h1>
+        <!-- Rounded switch -->
+        <label class="switch">
+          <input id="checkbox" type="checkbox">
+          <span id="slider" class="slider round"></span>
+        </label>
+      </div>
+    </header>
+
+
+    <main id="main">
+
+    <div style=" text-align: center; margin-top:5px;   vertical-align: bottom;">
+      <label class="field a-field a-field_a2" style="vertical-align: bottom; ">
+        <input class="field__input a-field__input" id="siteInput" type="text" name="enter1" placeholder="e.g. facebook.com/*" required>
+        <span class="a-field__label-wrap">
+          <span class="a-field__label">URL Regex</span>
+        </span>
+      </label>
+
+      <input id="addButton" type="button" class="remove example_a" value="Add to list">
+
+      <span class="tooltip">
+        <img src="question.png" alt="tooltip" border="0" style="width: 16px; vertical-align: middle">
+        <span class="tooltiptext1">
+          Enter url regex of the site you are addicted to.
+          <br>
+          ex:
+          &nbsp;&nbsp;facebook.com/*
+          <br>
+          &nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;https://www.reddit.com/*
+          <br>
+          Click
+          <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions" style="color: #D1C4E9">here</a>
+          for detail of regex.
+        </span>
+      </span>
+
+    </div>
+
+
+    <div style=" text-align: center; padding-top:5px;   vertical-align: bottom;">
+
+      Timeout:
+      <input id="timeout" class="timeset" type="text" placeholder="" size="3px">(min), Idle Time:
+      <input id="idletime" class="timeset" type="text" placeholder="" size="3px">(sec)
+
+      <input id="timeButton" type="button" class="remove example_a" value="submit">
+
+      <span class="tooltip">
+        <img src="question.png" alt="tooltip" border="0" style="width: 16px; vertical-align: middle">
+        <span class="tooltiptext2">
+          • Extension will remind you every "Timeout".<br>
+          • Timer will pause if you go idle after "Idle Time".<br>
+          • Integer isn't necessary.
+        </span>
+      </span>
+    </div>
+
+
+    <div class="table-div" style="padding-bottom:10px; padding-top: 10px;">
+      <table class="fixed_header" id="myTable" border="0" cellspacing="0" cellpadding="0" style="text-align: center">
+        <thead >
+          <tr style="">
+            <th class="cell_index" colspan="1" style="visibility: hidden">#</th>
+            <th class="cell_site_regex" colspan="1">Sites You Addicted To</th>
+            <th class="cell_delete_icon" colspan="1"></th>
+          </tr>
+          <tr>
+            <th class="cell_index" colspan="1">#</th>
+            <th class="cell_site_regex" colspan="1">regex of site</th>
+            <th class="cell_delete_icon" colspan="1"></th>
+          </tr>
+        </thead>
+        <tbody id="mytbody">
+        </tbody>
+      </table>
+    </div>
+
+
+  </main>
+  <section id="section">
+      <div class="message">
+      <span id="congratulations">Congratulations, you are not addicted to current site!</span>
+      <span id="time_spent">You have spent <span id="sec" style="width: 40px; display: inline-block;">0</span> seconds on current site.</span>
+      <span id="turnedoff">Webholic Reminder is currently turned off.</span>
+
+    </div>
+  </section>
+
+
+  <footer>
+    <div>&copy; 2019 Wen-Ya Lin</div>
+    <div>
+      <!-- target property decide how to open the link, we should use _blank in extension-->
+      Visit
+      <a class="external_link" target="_blank" href="https://wenyalintw.github.io">My Website</a>
+      or
+      <a class="external_link" target="_blank" href="https://github.com/wenyalintw/Webaholic-Reminder">Repo of Extension</a>
+    </div>
+
+  </footer>
+
+  </body>
+
+  <script src="./popup.js"></script>
+
+</html>

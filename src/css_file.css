@@ -1,0 +1,457 @@
+:root {
+  --color1: #ecf0e1;
+  --color2: #E7E3E4;
+  --color3: #F9F9F9;
+  --color4: #A3948C;
+  --color5: #f0f0f0;
+
+}
+
+
+/* html, body*/
+
+html body{
+  max-height: 400px;
+  width: 420px;
+  font-family: -apple-system, Consolas, Andale Mono, Courier New, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  margin: 0;
+
+}
+
+html:not([dir="rtl"]) header h1 {
+  height:100%;
+  padding-left: 30px;
+  background-position: left center;
+}
+
+html[dir="rtl"] header h1 {
+  padding-right: 30px;
+  background-position: right center;
+}
+
+/* header */
+
+header {
+  margin-right: 16px;
+  margin-left: 16px;
+}
+
+header .top
+{
+  display: flex;
+  align-items: center;
+}
+
+header h1 {
+  background-image: url(bell.png);
+  background-repeat: no-repeat;
+  background-size: 24px;
+  flex-grow: 1;
+  font-size: 16px;
+}
+
+
+/* header - slider */
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 28px;
+  vertical-align: middle;
+}
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /*background-color: var(--color1);*/
+  background-color: var(--color2);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: var(--color4);;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(20px);
+  -ms-transform: translateX(20px);
+  transform: translateX(20px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 28px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+
+
+/* main */
+
+main {
+  background-color: var(--color3);
+  border-top: 1px solid #ddd;
+}
+
+
+/* main - table */
+
+table {
+  /*width: calc(100% - 40px);*/
+  width: 420px;
+  max-width: 420px;
+  text-align: left;
+  /* line-height用來調row高 */
+  line-height: 24px;
+  border-collapse: separate;
+  border-spacing: 0;
+  /*border: 1px solid var(--color2);*/
+  /* margin here is 10px top-space, other side auto*/
+  margin: auto;
+  border-radius: .25rem;
+  table-layout: fixed;
+
+}
+
+thead tr:first-child {
+  background: var(--color2);
+  color: var(--color4);
+  border: none;
+  /* 標題列高一點 */
+  line-height: 32px;
+  /*text-align: center;*/
+  /*width: 100%;*/
+}
+
+thead tr:nth-child(2) {
+  background: var(--color3);
+}
+
+th:first-child,
+td:first-child {
+  padding: 0 15px 0 20px;
+}
+
+th {
+  font-weight: 500;
+}
+
+thead tr:last-child th {
+  border-bottom: 1px solid #ddd;
+}
+
+tbody tr td{
+  background-color: var(--color3);
+}
+
+tbody tr:hover td{
+  background-color: var(--color5);
+  cursor: default;
+}
+
+tbody tr:last-child td {
+  border: none;
+}
+
+tbody td {
+  border-bottom: 1px solid #ddd;
+}
+
+td:last-child {
+  text-align: right;
+  padding-right: 10px;
+}
+
+.button {
+  color: #aaa;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+.cell_index{
+  width : 10%;
+}
+
+.cell_site_regex{
+  width : 80%;
+  /*max-width: 80%;*/
+  /*word-wrap: break-word;*/
+  word-break: break-all;
+}
+
+.cell_delete_icon{
+  width : 10%;
+}
+
+.cell_delete_icon:hover {
+  color: #dc2a2a;
+}
+
+/* scrollable tbody! (fix thead) 用max-height和overflow來讓tbody scrollable */
+.fixed_header{
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+.fixed_header tbody{
+  display:block;
+  width: 100%;
+  overflow: auto;
+  max-height: 100px;
+}
+.fixed_header thead tr {
+  display: block;
+  border-bottom: none;
+}
+
+
+/* main - button */
+.example_a {
+  color: var(--color4) !important;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: var(--color5);
+  padding: 4px;
+  border-radius: 5px;
+  display: inline-block;
+  border: none;
+  transition: all 0.2s ease 0s;
+}
+
+.example_a:hover {
+  /*background: var(--color2);*/
+  letter-spacing: 1px;
+  /*-webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);*/
+  /*-moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);*/
+  transition: all 0.2s ease 0s;
+}
+
+/* fancy input field */
+
+/*
+=====
+LEVEL 1. RESET STYLES
+=====
+*/
+
+/*.field{*/
+  /*--uiFieldPlaceholderColor: var(--fieldPlaceholderColor, #767676);*/
+/*}*/
+
+.field__input{
+  background-color: transparent;
+  border-radius: 0;
+  border: none;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  font-family: inherit;
+  font-size: 1em;
+}
+
+/*
+=====
+LEVEL 2. CORE STYLES
+=====
+*/
+
+.a-field{
+  display: inline-block;
+}
+
+.a-field__input{
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.a-field__input:focus{
+  outline: none;
+}
+
+/*
+=====
+LEVEL 3. PRESENTATION STYLES
+=====
+*/
+
+/* a-field */
+
+.a-field{
+  --uiFieldHeight: 30px;
+  --uiFieldBorderWidth: 2px;
+  --uiFieldBorderColor: var(--fieldBorderColor);
+
+  --uiFieldFontSize: 1em;
+  --uiFieldHintFontSize: 1em;
+
+  --uiFieldPaddingRight: 15px;
+  --uiFieldPaddingBottom: 15px;
+  --uiFieldPaddingLeft: 15px;
+
+  position: relative;
+  box-sizing: border-box;
+  font-size: var(--uiFieldFontSize);
+  padding-top: 1em;
+}
+
+.a-field__input{
+  height: var(--uiFieldHeight);
+  padding: 0 var(--uiFieldPaddingRight) 0 var(--uiFieldPaddingLeft);
+  border-bottom: var(--uiFieldBorderWidth) solid var(--uiFieldBorderColor);
+}
+
+.a-field__input::-webkit-input-placeholder{
+  opacity: 0;
+  transition: opacity .2s ease-out;
+}
+
+.a-field__input::-moz-placeholder{
+  opacity: 0;
+  transition: opacity .2s ease-out;
+}
+
+.a-field__input:not(:placeholder-shown) ~ .a-field__label-wrap .a-field__label{
+  opacity: 0;
+  bottom: var(--uiFieldPaddingBottom);
+}
+
+.a-field__input:focus::-webkit-input-placeholder{
+  opacity: 1;
+  transition-delay: .2s;
+}
+.a-field__input:focus::-moz-placeholder{
+  opacity: 1;
+  transition-delay: .2s;
+}
+.a-field__label-wrap{
+  box-sizing: border-box;
+  width: 100%;
+  height: var(--uiFieldHeight);
+  pointer-events: none;
+  cursor: text;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.a-field__label{
+  position: absolute;
+  left: var(--uiFieldPaddingLeft);
+  bottom: calc(50% - .5em);
+
+  line-height: 1;
+  font-size: var(--uiFieldHintFontSize);
+
+  pointer-events: none;
+  transition: bottom .2s cubic-bezier(0.9,-0.15, 0.1, 1.15), opacity .2s ease-out;
+  will-change: bottom, opacity;
+}
+
+.a-field__input:focus ~ .a-field__label-wrap .a-field__label{
+  opacity: 1;
+  bottom: var(--uiFieldHeight);
+}
+
+/* a-field_a2 */
+.a-field_a2 .a-field__label-wrap::after{
+  content: "";
+  box-sizing: border-box;
+  width: 0;
+  height: var(--uiFieldBorderWidth);
+  background-color: var(--fieldBorderColorActive);
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  will-change: width;
+  transition: width .285s ease-out;
+}
+
+.a-field_a2 .a-field__input:focus ~ .a-field__label-wrap::after{
+  width: 100%;
+}
+.field{
+  --fieldBorderColor: var(--color2);
+  --fieldBorderColorActive: var(--color4);
+}
+
+
+.timeset {
+  outline: 0;
+  border-width: 0 0 2px;
+  border-color: var(--color2);
+  background-color: transparent;
+  text-align: center;
+}
+.timeset:focus {
+  border-color: var(--color4)
+}
+
+/* message section */
+
+.message {
+  text-align: center;
+  vertical-align: middle;
+  height: 100%;
+  background-color: var(--color1);
+  color: #323232;
+  font-size:11px;
+  padding:10px;
+}
+
+
+/* footer & external_link inside*/
+
+footer {
+  height: 100%;
+  background-color: var(--color5);
+  color:#636363;
+  font-size:11px;
+  padding:10px;
+  text-align:center;
+  vertical-align: middle;
+}
+
+
+.external_link{
+  color:#4285f4;
+  display:inline;
+  font-size:11px;
+  text-decoration:none;
+}
+
+.external_link:hover{
+  text-decoration:underline;
+}

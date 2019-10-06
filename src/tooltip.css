@@ -1,0 +1,86 @@
+
+/* tooltip的，on mouse hover*/
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+/* tooltiptext1 */
+
+.tooltip .tooltiptext1 {
+  display: inline-block;
+  visibility: hidden;
+  background-color: black;
+  color: #fff;
+  text-align: left;
+  border-radius: 6px;
+  padding: 5px;
+  /* Position the tooltip */
+  /* z-index決定element覆蓋時誰在上面*/
+  z-index: 1;
+  left: -185px;
+  top: 12px;
+  position: absolute;
+  width: 210px;
+
+}
+
+.tooltip:hover .tooltiptext1 {
+  visibility: visible;
+}
+
+/* link below explain pseudo-class & pseudo-elements*/
+/* https://stackoverflow.com/questions/41867664/what-is-the-difference-between-pseudo-classes-and-pseudo-elements */
+
+.tooltiptext1:after, .tooltiptext1:before {
+	bottom: 100%;
+	border: solid transparent;
+	content: "";
+	position: absolute;
+	pointer-events: none;
+}
+.tooltiptext1:after {
+	border-color: rgba(160, 215, 250, 0);
+	border-bottom-color: black;
+	border-width: 8px;
+	margin-left: -24px;
+}
+
+
+/* tooltiptext2 */
+
+.tooltip .tooltiptext2 {
+  display: inline-block;
+  visibility: hidden;
+  background-color: black;
+  color: #fff;
+  text-align: left;
+  border-radius: 6px;
+  padding: 5px;
+  /* Position the tooltip */
+  /* z-index決定element覆蓋時誰在上面*/
+  z-index: 1;
+  left: -327px;
+  top: 12px;
+  position: absolute;
+  width: 350px;
+
+}
+
+.tooltip:hover .tooltiptext2 {
+  visibility: visible;
+}
+
+.tooltiptext2:after, .tooltiptext2:before {
+	bottom: 100%;
+	border: solid transparent;
+	content: "";
+	position: absolute;
+	pointer-events: none;
+}
+.tooltiptext2:after {
+	border-color: rgba(160, 215, 250, 0);
+	border-bottom-color: black;
+	border-width: 8px;
+	margin-left: 150px;
+}
