@@ -5,7 +5,7 @@
   <h2 align="center">Webaholic Reminder</h2>
   <h6 align="center">––––– Chrome Extension –––––</h2>
 	<div align="center">
-		Remind you to work when you spend too much time on the internet.
+		Remind you to work when you spend too much time on specific sites.
 	</div>
 	<div align="center">
 		Currently available on <a href="https://chrome.google.com/webstore/detail/webaholic-reminder/ilidphpahmdlgjlcejdjhbeodnjhdhbb">Chrome Web Store</a>.
